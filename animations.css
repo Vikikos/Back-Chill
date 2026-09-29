@@ -1,0 +1,42 @@
+@keyframes Bg_color {
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+
+@property --color-centro {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgb(255, 228, 120);
+}
+
+@property --color-borde {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgba(181, 90, 45, 0.8);
+}
+@keyframes Bg_color_2 {
+  0%, 100% {
+    --color-centro: rgba(227, 222, 86, 1);
+    --color-borde: rgba(128, 69, 40, 0.8);
+  }
+  50% {
+    --color-centro: rgba(128, 69, 40, 0.8);
+    --color-borde: rgba(227, 222, 86, 1);
+  }
+}
+
+@keyframes Bg_color_3 {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
