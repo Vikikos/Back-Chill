@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100dvh;
+}
+h1{
+    position: fixed;
+    top: 0;
+    padding: 1em;
+    color: #fff;
+}
+.buttons{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button{
+        background-color: #fff;
+        padding: 1em;
+        margin: 0 1em;
+        border: none;
+        border-radius: 10px;
+    }
+}
+.buttons button:nth-child(1){
+    background: linear-gradient(45deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.buttons button:nth-child(2){
+    background: radial-gradient(circle, var(--color-centro) 1%, var(--color-borde) 100%);
+}
+
+.buttons button:nth-child(3){
+    background: linear-gradient(-45deg,
+    hsl(0, 60%, 85%),    /* Rojo suave */
+    hsl(35, 60%, 85%),   /* Naranja suave */
+    hsl(55, 60%, 85%),   /* Amarillo suave */
+    hsl(120, 50%, 85%),  /* Verde suave */
+    hsl(190, 60%, 85%),  /* Azul claro suave */
+    hsl(250, 60%, 85%),  /* Azul/Violeta suave */
+    hsl(300, 60%, 85%),  /* Magenta suave */
+    hsl(0, 60%, 85%)     /* Se repite el primer color para un bucle continuo sin saltos */
+  );
+}
+#bgColors{
+    background-color: rgb(0, 0, 0);
+    background-size: 200%;
+    width: 100%;
+    min-height: 100dvh;
+    
+}
+.bg_color_1 {
+    background: linear-gradient(45deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    animation: Bg_color 3s infinite;
+}
+
+.bg_color_2 {
+    background: radial-gradient(circle, var(--color-centro) 1%, var(--color-borde) 100%);
+    animation: Bg_color_2 4s infinite;
+}
+
+@keyframes Bg_color {
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+@property --color-centro {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgb(255, 228, 120);
+}
+
+@property --color-borde {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgba(181, 90, 45, 0.8);
+}
+@keyframes Bg_color_2 {
+  0%, 100% {
+    --color-centro: rgba(227, 222, 86, 1);
+    --color-borde: rgba(128, 69, 40, 0.8);
+  }
+  50% {
+    --color-centro: rgba(128, 69, 40, 0.8);
+    --color-borde: rgba(227, 222, 86, 1);
+  }
+}
+
+@keyframes Bg_color_3 {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+.bg_color_3 {
+  background: linear-gradient(-45deg,
+    hsl(0, 60%, 85%),    /* Rojo suave */
+    hsl(35, 60%, 85%),   /* Naranja suave */
+    hsl(55, 60%, 85%),   /* Amarillo suave */
+    hsl(120, 50%, 85%),  /* Verde suave */
+    hsl(190, 60%, 85%),  /* Azul claro suave */
+    hsl(250, 60%, 85%),  /* Azul/Violeta suave */
+    hsl(300, 60%, 85%),  /* Magenta suave */
+    hsl(0, 60%, 85%)     /* Se repite el primer color para un bucle continuo sin saltos */
+  );
+  background-size: 400% 400%;
+  animation: Bg_color_3 15s ease infinite;
+}
