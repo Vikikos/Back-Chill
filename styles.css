@@ -89,3 +89,7 @@ h1{
 
     animation: autumn_radial_pulse 8s ease-in-out infinite;
 }
+
+.bg_color_5 {
+    background-color: #1a6b17;
+}

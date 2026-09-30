@@ -13,22 +13,22 @@
 @property --color-centro {
   syntax: '<color>';
   inherits: false;
-  initial-value: rgb(173, 255, 226);
+  initial-value: rgb(255, 229, 100);
 }
 
 @property --color-borde {
   syntax: '<color>';
   inherits: false;
-  initial-value: rgb(33, 129, 92);
+  initial-value: rgb(72, 47, 5);
 }
 @keyframes Bg_color_2 {
   0%, 100% {
-    --color-centro: rgb(173, 255, 226);
-    --color-borde: rgb(33, 129, 92);
+    --color-centro: rgb(255, 229, 100);
+    --color-borde: rgb(72, 47, 5);
   }
   50% {
-    --color-centro: rgb(33, 129, 92);
-    --color-borde: rgb(173, 255, 226);
+    --color-centro: rgb(72, 47, 5);
+    --color-borde: rgb(255, 229, 100);
   }
 }
 
