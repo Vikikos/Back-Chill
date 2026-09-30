@@ -51,7 +51,7 @@
 @property --otono-medio {
   syntax: '<color>';
   inherits: false;
-  initial-value: #D9531E;
+  initial-value: #b35631;
 }
 
 @property --otono-borde {
@@ -63,12 +63,12 @@
 @keyframes autumn_radial_pulse {
   0%, 100% {
     --otono-centro: #E6A15C;
-    --otono-medio:  #D9531E; 
+    --otono-medio:  #b35631; 
     --otono-borde:  #59220E;
   }
   50% {
     --otono-centro: #8C2D19; 
-    --otono-medio:  #A65B29; 
+    --otono-medio:  #b35631; 
     --otono-borde:  #E6A15C;
   }
 }

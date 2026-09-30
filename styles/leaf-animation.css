@@ -1,0 +1,36 @@
+
+.leaf {
+  position: absolute;
+  top: -50px; 
+  will-change: transform;
+  animation: fall linear infinite;
+}
+
+.leaf-blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px); 
+  -webkit-backdrop-filter: blur(3px); 
+  background: linear-gradient(180deg, #8dd1638f 0%, #1d4f0768 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    /* Balanceo hacia un lado a mitad del camino */
+    transform: translateY(50vh) rotate(180deg) translateX(50px);
+  }
+  100% {
+    /* Llega al final de la pantalla */
+    transform: translateY(105vh) rotate(360deg) translateX(-30px);
+    opacity: 0.2;
+  }
+}
