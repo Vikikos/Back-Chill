@@ -13,22 +13,22 @@
 @property --color-centro {
   syntax: '<color>';
   inherits: false;
-  initial-value: rgb(255, 228, 120);
+  initial-value: rgb(173, 255, 226);
 }
 
 @property --color-borde {
   syntax: '<color>';
   inherits: false;
-  initial-value: rgba(181, 90, 45, 0.8);
+  initial-value: rgb(33, 129, 92);
 }
 @keyframes Bg_color_2 {
   0%, 100% {
-    --color-centro: rgba(227, 222, 86, 1);
-    --color-borde: rgba(128, 69, 40, 0.8);
+    --color-centro: rgb(173, 255, 226);
+    --color-borde: rgb(33, 129, 92);
   }
   50% {
-    --color-centro: rgba(128, 69, 40, 0.8);
-    --color-borde: rgba(227, 222, 86, 1);
+    --color-centro: rgb(33, 129, 92);
+    --color-borde: rgb(173, 255, 226);
   }
 }
 
@@ -38,5 +38,37 @@
   }
   100% {
     background-position: 100% 100%;
+  }
+}
+
+
+@property --otono-centro {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #E6A15C; 
+}
+
+@property --otono-medio {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #D9531E;
+}
+
+@property --otono-borde {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #59220E; 
+}
+
+@keyframes autumn_radial_pulse {
+  0%, 100% {
+    --otono-centro: #E6A15C;
+    --otono-medio:  #D9531E; 
+    --otono-borde:  #59220E;
+  }
+  50% {
+    --otono-centro: #8C2D19; 
+    --otono-medio:  #A65B29; 
+    --otono-borde:  #E6A15C;
   }
 }

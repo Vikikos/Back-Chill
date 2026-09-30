@@ -78,3 +78,14 @@ h1{
   background-size: 400% 400%;
   animation: Bg_color_3 5s ease infinite;
 }
+
+.bg_color_4 {
+    background: radial-gradient(
+        circle at center,
+        var(--otono-centro) 0%,
+        var(--otono-medio) 50%,
+        var(--otono-borde) 100%
+    );
+
+    animation: autumn_radial_pulse 8s ease-in-out infinite;
+}
