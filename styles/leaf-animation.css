@@ -6,7 +6,7 @@
   animation: fall linear infinite;
 }
 
-.leaf-blur-overlay {
+.blur-overlay {
   position: absolute;
   top: 0;
   left: 0;

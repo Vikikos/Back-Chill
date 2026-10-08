@@ -1,4 +1,4 @@
-const COLORS = 6;
+const COLORS = 7;
 const divBg = document.querySelector('#bgColors');
 let isOpenMenu = false;
 
@@ -42,7 +42,7 @@ function iniciarCaidaDeHojas(imageUrl, cantidad = 20) {
   }
 
   const blurOverlay = document.createElement('div');
-  blurOverlay.classList.add('leaf-blur-overlay');
+  blurOverlay.classList.add('blur-overlay');
   container.appendChild(blurOverlay);
 
   for (let i = 0; i < cantidad; i++) {
