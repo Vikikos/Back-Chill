@@ -18,42 +18,26 @@ h1{
 .buttons{
     position: fixed;
     bottom: 0;
-    margin-bottom: 2em;
-    width: 100%;
+    left: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items: end;
+    width: 100%;
     z-index: 2;
     button{
         background-color: #fff;
         padding: 1em;
-        margin: 0 1em;
         border: none;
         border-radius: 10px;
+        box-shadow: 2px 2px 4px #0000004d;
     }
 }
-.buttons button:nth-child(1){
-    background: linear-gradient(45deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-}
-
-.buttons button:nth-child(2){
-    background: radial-gradient(circle, var(--color-centro) 1%, var(--color-borde) 100%);
-}
-
-.buttons button:nth-child(3){
-    background: linear-gradient(-45deg,
-    hsl(0, 60%, 85%),    /* Rojo suave */
-    hsl(35, 60%, 85%),   /* Naranja suave */
-    hsl(55, 60%, 85%),   /* Amarillo suave */
-    hsl(120, 50%, 85%),  /* Verde suave */
-    hsl(190, 60%, 85%),  /* Azul claro suave */
-    hsl(250, 60%, 85%),  /* Azul/Violeta suave */
-    hsl(300, 60%, 85%),  /* Magenta suave */
-    hsl(0, 60%, 85%)     /* Se repite el primer color para un bucle continuo sin saltos */
-  );
+#menu-button{
+    margin: 1em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
 }
 #bgColors{
-    background-size: 200%;
     top: 0;
     left: 0;
     width: 100%;
@@ -64,11 +48,13 @@ h1{
 }
 .bg_color_1 {
     background: linear-gradient(45deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    background-size: 200%;
     animation: Bg_color 3s infinite;
 }
 
 .bg_color_2 {
     background: radial-gradient(circle, var(--color-centro) 1%, var(--color-borde) 100%);
+    background-size: 200%;
     animation: Bg_color_2 5s infinite;
 }
 .bg_color_3 {
@@ -93,10 +79,26 @@ h1{
         var(--otono-medio) 50%,
         var(--otono-borde) 100%
     );
-
+    background-size: 200%;
     animation: autumn_radial_pulse 8s ease-in-out infinite;
 }
 
 .bg_color_5 {
     background: linear-gradient(180deg, #67a13e 0%, #4a6919 100%)
+}
+
+.bg_color_6 {
+    background: radial-gradient(
+        circle at center,
+        var(--sky-black) 0%,
+        var(--sky-black) var(--first),
+        var(--light) calc(var(--first) + 5%),
+        var(--white) 50%,
+        var(--light) calc(var(--end) - 5%),
+        var(--sky-black) var(--end),
+        var(--sky-black) 100%
+    );
+
+    animation: Bg_color_6 9s ease infinite;
+    background-size: 100%;
 }

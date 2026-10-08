@@ -1,0 +1,26 @@
+
+.menu-hide{
+    display: none;
+}
+
+.menu-show{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #00000084;
+    border-radius: 10px;
+    padding: 1em;
+    animation: showMenu 0.3s;
+    transform-origin: bottom left;
+    margin: 4em 0;
+}
+
+@keyframes showMenu {
+    0% {
+       transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

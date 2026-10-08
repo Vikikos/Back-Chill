@@ -72,3 +72,53 @@
     --otono-borde:  #E6A15C;
   }
 }
+
+@property --sky-black {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #010218; 
+}
+
+@property --light {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #5c4d2c;
+}
+
+@property --white {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #fffceb; 
+}
+
+
+@property --first {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 45%; 
+}
+
+@property --end {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 55%; 
+}
+
+@keyframes Bg_color_6 {
+  0%,100% {
+    --sky-black: #010218;
+    --light: #5c4d2c;
+    --white: #f8f1cc;
+
+    --first: 45%;
+    --end: 55%;
+  }
+  50% {
+    --sky-black: #010218;
+    --light: #5d4b20;
+    --white: #fefef9;
+
+    --first: 30%;
+    --end: 70%;
+  }
+}

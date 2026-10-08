@@ -1,8 +1,22 @@
-const COLORS = 5;
+const COLORS = 6;
 const divBg = document.querySelector('#bgColors');
+let isOpenMenu = false;
+
+function toggleMenu() {
+  const menuContainer = document.querySelector('#menu');
+  menuContainer.className = '';
+  console.log(isOpenMenu)
+  if(isOpenMenu) {
+    menuContainer.classList.add('menu-hide');
+  } else {
+    menuContainer.classList.add('menu-show');
+  }
+  isOpenMenu = !isOpenMenu;
+}
 
 function changeColor(number) {
     deleteColor();
+    toggleMenu();
     divBg.classList.add(`bg_color_${number}`);
 }
 
