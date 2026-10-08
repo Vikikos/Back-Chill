@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -14,6 +16,7 @@ h1{
     padding: 1em;
     color: #fff;
     z-index: 2;
+    font-family: 'Sora', sans-serif;
 }
 .buttons{
     position: fixed;
@@ -34,8 +37,10 @@ h1{
 }
 #menu-button{
     margin: 1em;
+    padding: 0.5em;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+    font-weight: bold;
 }
 #bgColors{
     top: 0;
