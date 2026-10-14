@@ -89,7 +89,7 @@ h1{
 }
 
 .bg_color_5 {
-    background: linear-gradient(180deg, #67a13e 0%, #4a6919 100%)
+    background: linear-gradient(180deg, #67a13e 0%, #4a6919 100%);
 }
 
 .bg_color_6 {
@@ -106,4 +106,8 @@ h1{
 
     animation: Bg_color_6 9s ease infinite;
     background-size: 100%;
+}
+
+.bg_color_7 {
+    background: linear-gradient(180deg, #0f1d6d 0%, #b08dcc 100%);
 }

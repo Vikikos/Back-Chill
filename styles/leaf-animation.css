@@ -5,6 +5,10 @@
   will-change: transform;
   animation: fall linear infinite;
 }
+.snowDown{
+  position: absolute;
+  bottom: 0;
+}
 
 .blur-overlay {
   position: absolute;
@@ -14,7 +18,7 @@
   height: 100%;
   backdrop-filter: blur(3px); 
   -webkit-backdrop-filter: blur(3px); 
-  background: linear-gradient(180deg, #8dd1638f 0%, #1d4f0768 100%);
+
   pointer-events: none;
   z-index: 1;
 }
