@@ -15,7 +15,7 @@ h1{
     top: 0;
     padding: 1em;
     color: #fff;
-    z-index: 2;
+    z-index: 1000;
     font-family: 'Sora', sans-serif;
 }
 .buttons{
@@ -26,7 +26,7 @@ h1{
     flex-direction: row;
     align-items: end;
     width: 100%;
-    z-index: 2;
+    z-index: 1000;
     button{
         background-color: #fff;
         padding: 1em;
@@ -110,4 +110,74 @@ h1{
 
 .bg_color_7 {
     background: linear-gradient(180deg, #0f1d6d 0%, #b08dcc 100%);
+}
+
+.tree {
+    background-image: url('../images/tree.png');
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    height: 300px;
+    width: 250px;
+    background-position: center;
+    background-size: 100%;
+    z-index: 9;
+    filter: drop-shadow(0px 8px 10px #c5bef8b0);
+}
+.tree-1 {
+    height: 200px;
+    width: 150px;
+    right: 8px;
+    bottom: 55px;
+    z-index: 8;
+    opacity: 0.8;
+}
+
+@property --blue-sunset {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #301e71 ;
+}
+
+@property --purple-sunset {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #512380 ;
+}
+
+@property --pink-sunset {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #ec6eaf; 
+}
+
+@property --coral-sunset {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #ff9071; 
+}
+
+@property --orange-sunset {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #e46646; 
+}
+
+@property --red-sunset {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #d74d42; 
+}
+
+.bg_color_8 {
+    background: radial-gradient(circle, 
+        var(--red-sunset) 0%, 
+        var(--orange-sunset) 8%,
+        var(--coral-sunset) 25%,
+        var(--pink-sunset) 40%,
+        var(--purple-sunset) 50%,
+        var(--blue-sunset) 100%
+    );
+    background-size: 200% 300%;
+    animation: Bg_color_8 5s infinite;
 }

@@ -1,4 +1,4 @@
-const COLORS = 7;
+const COLORS = 8;
 const divBg = document.querySelector('#bgColors');
 let isOpenMenu = false;
 
@@ -66,7 +66,11 @@ function iniciarCaidaDeHojas(imageUrl, cantidad = 20) {
 
 function addSnow() {
   const svg = createSnowDown();
+  const trees = createTrees();
+
   divBg.appendChild(svg);
+
+  divBg.append(...trees);
 }
 
 const createSnowDown = () => {
@@ -87,4 +91,16 @@ const createSnowDown = () => {
   svg.classList.add('snowDown');
 
   return svg;
+}
+
+const createTrees = () => {
+  const treeContainer = document.createElement('div');
+  treeContainer.classList.add('tree');
+
+  const treeContainer1 = document.createElement('div');
+  treeContainer1.classList.add('tree', 'tree-1');
+
+  const trees = Array.from([treeContainer, treeContainer1])
+
+  return trees
 }
