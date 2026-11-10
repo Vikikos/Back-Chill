@@ -170,14 +170,5 @@ h1{
 }
 
 .bg_color_8 {
-    background: radial-gradient(circle, 
-        var(--red-sunset) 0%, 
-        var(--orange-sunset) 8%,
-        var(--coral-sunset) 25%,
-        var(--pink-sunset) 40%,
-        var(--purple-sunset) 50%,
-        var(--blue-sunset) 100%
-    );
-    background-size: 200% 300%;
-    animation: Bg_color_8 5s infinite;
+    background-color: #3e0602;
 }

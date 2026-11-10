@@ -122,12 +122,3 @@
     --end: 70%;
   }
 }
-
-@keyframes Bg_color_8 {
-    0%{
-        background-position: 50% 50%;
-    }
-    100%{
-        background-position: 50% 0%;
-    }
-}
