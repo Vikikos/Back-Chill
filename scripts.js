@@ -1,4 +1,4 @@
-const COLORS = 8;
+const COLORS = 9;
 const divBg = document.querySelector('#bgColors');
 let isOpenMenu = false;
 
