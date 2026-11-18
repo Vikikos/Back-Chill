@@ -1,0 +1,112 @@
+
+.bg_color_10 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+@property --p1  { syntax: '<percentage>'; initial-value: 5%; inherits: false; }
+
+@property --p3  { syntax: '<percentage>'; initial-value: 14%; inherits: false; }
+
+@property --p5  { syntax: '<percentage>'; initial-value: 25%; inherits: false; }
+
+@property --p7  { syntax: '<percentage>'; initial-value: 36%; inherits: false; }
+
+@property --p9  { syntax: '<percentage>'; initial-value: 47%; inherits: false; }
+
+@property --p11 { syntax: '<percentage>'; initial-value: 56%; inherits: false; }
+@property --p12 { syntax: '<percentage>'; initial-value: 61%; inherits: false; }
+
+@property --p14 { syntax: '<percentage>'; initial-value: 72%; inherits: false; }
+
+@property --p16 { syntax: '<percentage>'; initial-value: 83%; inherits: false; }
+
+@property --p18 { syntax: '<percentage>'; initial-value: 90%; inherits: false; }
+
+@property --p20 { syntax: '<percentage>'; initial-value: 97%; inherits: false; }
+
+
+
+.lines-aurora-div{
+    width: 30%;
+    height: 100vh;
+    background: #031133;
+    background: linear-gradient(90deg,
+    rgba(15, 43, 105, 1) 0%, 
+    rgba(156, 212, 229, 0.85) var(--p1), 
+    rgba(15, 43, 105, 1) 8%, 
+    rgba(36, 187, 152, 0.85) var(--p3), 
+    rgba(15, 43, 105, 1) 19%, 
+    rgba(152, 191, 221, 0.85) var(--p5), 
+    rgba(15, 43, 105, 1) 32%, 
+    rgba(9, 181, 187, 0.86) var(--p7), 
+    rgba(15, 43, 105, 1) 40%, 
+    rgba(49, 235, 179, 0.85) var(--p9), 
+    rgba(15, 43, 105, 1) 52%, 
+    rgb(159, 125, 240) var(--p11), 
+    rgba(78, 184, 177, 0.85) var(--p12), 
+    rgba(15, 43, 105, 1) 66%, 
+    rgba(43, 128, 156, 0.84) var(--p14), 
+    rgba(15, 43, 105, 1) 78%, 
+    rgba(159, 86, 255, 0.753) var(--p16), 
+    rgba(15, 43, 105, 1) 86%, 
+    rgba(27, 169, 204, 0.8) var(--p18), 
+    rgba(15, 43, 105, 1) 93%, 
+    rgba(127, 228, 253, 0.83) var(--p20), 
+    rgba(15, 43, 105, 1) 100%);
+
+    transform-origin: top left;
+    animation: Change_percent 4s infinite;
+}
+
+@keyframes Change_percent {
+    0%, 100% {
+        --p1: 4%;
+        --p3: 14%;
+        --p5: 25%;
+        --p18: 90%;
+        --p9: 47%;
+        --p14: 72%;
+    }
+
+    15% {
+        --p9: 47%;
+        --p14: 72%;
+    }
+
+    50% {
+        --p1: 5%;
+        --p3: 12%;
+        --p5: 27%;
+        --p18: 88%;
+    }
+
+    65%{
+        --p9: 49%;
+        --p14: 70%;
+    }
+}
+
+.overlay_9 {
+    background: #081352;
+    background: linear-gradient(0deg,rgb(2, 5, 46) 0%, rgb(2, 5, 46) 25%, rgba(8, 53, 102, 0.199) 50%,  rgb(2, 5, 46) 75%, rgb(2, 5, 46) 100%);
+    position: absolute;
+    background-size: 120% 120%;
+    background-position: center;
+    animation: Bg_move_up 8s infinite;
+    width: 150vw;
+    height: 150vh;
+    z-index: 10;
+}
+
+@keyframes Bg_move_up {
+    0%, 100% {
+        transform: skew(0 , 5deg);
+    }
+
+    50% {
+        transform: skew(0 , -5deg);
+    }
+}

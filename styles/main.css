@@ -215,6 +215,10 @@ h1{
     animation-delay: 4s;
 }
 
+.light-beam:nth-child(3){
+    transform: rotate(-35deg);
+}
+
 .light-beam:nth-child(even){
     background: linear-gradient(
         180deg,
@@ -271,3 +275,5 @@ h1{
     transform: scale(1.8);
   }
 }
+
+

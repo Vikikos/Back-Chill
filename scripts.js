@@ -1,6 +1,12 @@
-const COLORS = 9;
+const COLORS = countButtons();
 const divBg = document.querySelector('#bgColors');
 let isOpenMenu = false;
+
+function countButtons() {
+  const buttonsContainer = document.querySelector('#menu');
+  const buttons = buttonsContainer.getElementsByTagName('button').length;
+  return buttons
+}
 
 function toggleMenu() {
   const menuContainer = document.querySelector('#menu');
