@@ -16,21 +16,37 @@
     <div class="buttons">
         <button onclick="toggleMenu()" id="menu-button">Temas</button>
         <div id="menu" class="menu-hide">
-            <button onclick="changeColor(1)">Sopra</button>
-            <button onclick="changeColor(2)">Fav Jova</button>
-            <button onclick="changeColor(3)">Unicornios</button>
-            <button onclick="changeColor(4)">Otoño</button>
-            <button onclick="changeColor(5); iniciarCaidaDeHojas('images/hoja.png', 25);">Naturaleza</button>
-            <button onclick="changeColor(6)">Eclipse</button>
-            <button onclick="changeColor(7); iniciarCaidaDeHojas('images/snow.png', 25); addSnow()">Navidad</button>
-            <button onclick="changeColor(8); createGiftTheme()">Regalo</button>
-            <button onclick="changeColor(9); createConsertTheme()">Concierto</button>
-            <button onclick="changeColor(10); createAuroraTheme()">Aurora</button>
+            <div class="recomendations-container">
+                <h3>Recomendaciones</h3>
+                <div class="recomendations-buttons">
+                    <button onclick="changeColor(1)">Sopra</button>
+                    <button onclick="changeColor(5); iniciarCaidaDeHojas('images/hoja.png', 25);">Naturaleza</button>
+                </div>
+            </div>
+            <div class="seasonal-container">
+                <h3>Estacionales</h3>
+                <div class="recomendations-buttons">
+                    <button onclick="changeColor(7); iniciarCaidaDeHojas('images/snow.png', 25); addSnow()">Navidad</button>
+                    <button onclick="changeColor(8); createGiftTheme()">Regalo</button>
+                </div>
+            </div>
+            <div class="all-container">
+                <h3>Todos</h3>
+                <div class="all-buttons">
+                    <button onclick="changeColor(2)">Fav Jova</button>
+                    <button onclick="changeColor(3)">Unicornios</button>
+                    <button onclick="changeColor(4)">Otoño</button>
+                    <button onclick="changeColor(6)">Eclipse</button>
+                    <button onclick="changeColor(9); createConsertTheme()">Concierto</button>
+                    <button onclick="changeColor(10); createAuroraTheme()">Aurora</button>
+                </div>
+            </div>
+            <div class="turnoff-container">
+                <button onclick="deleteColor(); toggleMenu()">Desactivar fondo</button>
+            </div>
         </div>
     </div>
-    <div id="bgColors">
-        <div class="sparkles"></div>
-    </div>
+    <div id="bgColors"></div>
     <script src="scripts.js"></script>
     <script src="new-button.js"></script>
     <script src="concert-button.js"></script>

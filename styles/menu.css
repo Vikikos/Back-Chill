@@ -1,12 +1,8 @@
-
 .menu-hide{
     display: none;
 }
 
 .menu-show{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
     background-color: #fff;
     box-shadow: 5px 5px 5px #00000084;
     border-radius: 10px;
@@ -15,6 +11,14 @@
     transform-origin: bottom left;
     margin: 4em 0;
 }
+.turnoff-container{
+    padding: 0.5em 0;
+    button {
+        width: 100%;
+        background-color: #fcb2b2 !important;
+    }
+}
+
 
 @keyframes showMenu {
     0% {
@@ -22,5 +26,84 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+.buttons{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    width: 100%;
+    z-index: 1000;
+    button{
+        background-color: #fff;
+        padding: 1em;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px #0000004d;
+    }
+}
+#menu-button{
+    margin: 1em;
+    padding: 0.5em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.first-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    .recomendations-container, .seasonal-container {
+        h3{
+            color: #fff;
+        }
+    }
+
+    button{
+        background-color: #fff;
+        padding: 1em;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px #0000004d;
+    }
+
+}
+
+
+    .recomendations-container, .seasonal-container, .all-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5em;
+        h3{
+            padding: 0.3em 0;
+            font-family: 'Sora', sans-serif;
+        }
+        .recomendations-buttons {
+            padding: 0.3em 0;
+        }
+    }
+    .seasonal-container {
+        background-color: #550209;
+        border: 8px double #ffd28e ;
+        h3 {
+            color: #fff;
+        }
+    }
+
+.all-container{
+    .all-buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5em;
     }
 }
