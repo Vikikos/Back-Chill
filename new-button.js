@@ -24,13 +24,18 @@ const createRibbon = () => {
     let divHorizontal = document.createElement('div');
     divHorizontal.classList.add('div-horizontal');
 
-    let ribbon = document.createElement('img');
-    ribbon.src = 'images/ribbon.png';
+    let ribbon = document.createElement('div');
+    let ribbonLeft = document.createElement('img');
+    let ribbonRight = document.createElement('img');
+    ribbonLeft.src = 'images/ribbon-left.png';
+    ribbonRight.src = 'images/ribbon-right.png';
     ribbon.classList.add('ribbon');
 
     ribbonContainer.appendChild(divHorizontal);
     ribbonContainer.appendChild(divVertical);
-    ribbonContainer.appendChild(ribbon)
+    ribbon.appendChild(ribbonLeft);
+    ribbon.appendChild(ribbonRight);
+    ribbonContainer.appendChild(ribbon);
 
     return ribbonContainer;
 }

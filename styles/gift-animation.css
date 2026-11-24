@@ -46,7 +46,48 @@
     left: 50%;
     transform: translate(-50%, -40%);
     width: 300px;
-    filter: drop-shadow(2px 2px 10px #917508);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img:nth-child(1) {
+        /* Left */
+        /* width: 100%; */
+        /* filter: drop-shadow(2px 2px 10px #917508); */
+        animation: Ribbon-left 1s;
+        transform-origin: right center;
+    }
+    img:nth-child(2) {
+        /* right */
+        /* width: 100%; */
+        /* filter: drop-shadow(2px 2px 10px #917508); */
+        animation: Ribbon-right 1s;
+        transform-origin: left center;
+    }
+}
+@keyframes Ribbon-left {
+    0%{
+        transform: skewY(0deg) scale(0);
+    }
+    50% {
+        transform: skewY(20deg) scale(1.2);
+    }
+    100% {
+        transform: skewY(0deg) scale(1);
+    }
+}
+
+@keyframes Ribbon-right {
+    0%{
+        transform: skewY(0deg) scale(0);
+    }
+    50% {
+        transform: skewY(-20deg) scale(1.2);
+    }
+    100% {
+        transform: skewY(0deg) scale(1);
+    }
 }
 
 .div-vertical {
